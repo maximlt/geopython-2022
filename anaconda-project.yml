@@ -1,0 +1,38 @@
+name: geopython-2022
+description: Easily build interactive and static maps with hvPlot
+
+packages:
+  - python=3.9
+  - hvplot
+  - matplotlib
+  - geoviews
+  - geopandas
+  - fiona
+  - xarray
+  - pooch
+  - datashader
+  - fastparquet
+  - notebook
+  - rise
+
+channels:
+  - conda-forge
+  - nodefaults
+
+commands:
+  notebooks:
+    notebook: geohvplot.ipynb
+
+downloads:
+  DATA_1:
+    url: https://datashader-data.s3.amazonaws.com/earthquakes-projected.parq
+    description: Earthquakes
+    filename: data/earthquakes-projected.parq
+
+platforms:
+- linux-64
+- osx-64
+- win-64
+
+env_specs:
+  default: {}
